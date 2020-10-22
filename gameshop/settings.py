@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'products',
+    'tailwind',
+    'theme',
 ]
 
 MIDDLEWARE = [
@@ -121,4 +123,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'theme/static/'
+
+
+# TAILWIND CONFIG
+
+TAILWIND_APP_NAME = 'theme'
