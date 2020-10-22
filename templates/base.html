@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block meta %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% endblock %}
+
+  <title>Game Shop</title>
+</head>
+<body>
+  <header>
+    <div id='navbar' style='width: 100%; background-color: red;'>
+      <ul>
+        <li>Featured</li>
+        <li>Deals</li>
+        <li>News</li>
+      </ul>
+    </div>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+  
+</body>
+</html>
