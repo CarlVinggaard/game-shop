@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     'products',
+    'userprofile',
     'tailwind',
     'theme',
     'allauth',
@@ -83,6 +84,8 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
+AUTH_USER_MODEL = "userprofile.UserProfile"
+
 WSGI_APPLICATION = 'gameshop.wsgi.application'
 
 
@@ -90,9 +93,13 @@ WSGI_APPLICATION = 'gameshop.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+   "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "carl",
+        "USER": "carl",
+        "PASSWORD": "",
+        "HOST": "localhost",
+        "PORT": "5432",
     }
 }
 
