@@ -88,6 +88,7 @@ AUTH_USER_MODEL = "userprofile.UserProfile"
 
 WSGI_APPLICATION = 'gameshop.wsgi.application'
 
+SITE_ID = 1
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
@@ -95,7 +96,7 @@ WSGI_APPLICATION = 'gameshop.wsgi.application'
 DATABASES = {
    "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "carl",
+        "NAME": "postgres",
         "USER": "carl",
         "PASSWORD": "",
         "HOST": "localhost",
