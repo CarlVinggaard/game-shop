@@ -2,5 +2,10 @@
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": true,
   "python.linting.enabled": true,
-  "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3"
+  "python.linting.lintOnSave": true,
+  "python.formatting.provider": "black",
+  "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSaveMode": "file"
 }
