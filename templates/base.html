@@ -2,29 +2,31 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  {% block meta %}
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% endblock %}
+  <head>
+    {% block meta %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% endblock %}
 
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css">
+    <link
+      rel="stylesheet"
+      href="{% static 'css/styles.css' %}"
+      type="text/css"
+    />
 
-  <title>Game Shop</title>
-</head>
-<body>
-  <header>
-    <div id='navbar' class="bg-red-500 w-full">
-      <ul>
-        <li>Featured</li>
-        <li>Deals</li>
-        <li>News</li>
-      </ul>
-    </div>
-  </header>
+    <title>Game Shop</title>
+  </head>
+  <body>
+    <header>
+      <div id="navbar" class="bg-red-500 w-full">
+        <ul>
+          <li>Featured</li>
+          <li>Deals</li>
+          <li>News</li>
+        </ul>
+      </div>
+    </header>
 
-  {% block content %}
-  {% endblock %}
-  
-</body>
+    {% block content %} {% endblock %}
+  </body>
 </html>
