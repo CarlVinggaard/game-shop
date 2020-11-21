@@ -1,0 +1,45 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Terraforming Mars",
+      "price": 41.99,
+      "min_players": 1,
+      "max_players": 5,
+      "min_age": 12,
+      "img_url": "https://cf.geekdo-images.com/wg9oOLcsKvDesSUdZQ4rxw__original/img/o8z_levBVArPUKI7ZrIysZEs1A0=/0x0/pic3536616.jpg",
+      "min_playing_time": 120,
+      "max_playing_time": 120,
+      "complexity_rating": 3.24,
+      "rating": 8.4,
+      "description": "Compete with rival CEOs to make Mars hospitable and build your corporation's empire.",
+      "categories": [
+        "strategy",
+        "economic",
+        "science fiction"
+      ]
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Caverna",
+      "price": 64.99,
+      "min_players": 1,
+      "max_players": 7,
+      "min_age": 12,
+      "img_url": "https://cf.geekdo-images.com/rz22tqa5PCYvK9oDjIbvxg__imagepagezoom/img/wdpB9e9oCFPq6gTQGvS3zDT2GNA=/fit-in/1200x900/filters:no_upscale():strip_icc()/pic1790789.jpg",
+      "min_playing_time": 30,
+      "max_playing_time": 210,
+      "complexity_rating": 3.78,
+      "rating": 8.0,
+      "description": "Following along the same lines as its predecessor (Agricola), Caverna: The Cave Farmers is a worker-placement game at heart, with a focus on farming. In the game, you are the bearded leader of a small dwarf family that lives in a little cave in the mountains. You begin the game with a farmer and his spouse, and each member of the farming family represents an action that the player can take each turn. Together, you cultivate the forest in front of your cave and dig deeper into the mountain. You furnish the caves as dwellings for your offspring as well as working spaces for small enterprises.",
+      "categories": [
+        "strategy",
+        "economic"
+      ]
+    }
+  }
+]
