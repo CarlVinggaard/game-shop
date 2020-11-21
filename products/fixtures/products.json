@@ -18,7 +18,9 @@
         "strategy",
         "economic",
         "science fiction"
-      ]
+      ],
+      "featured": false,
+      "deal": 35
     }
   },
   {
@@ -39,7 +41,8 @@
       "categories": [
         "strategy",
         "economic"
-      ]
+      ],
+      "featured": true
     }
   }
 ]
