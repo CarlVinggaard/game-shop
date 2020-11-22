@@ -2,9 +2,11 @@
 {% load static %}
 {% block content %}
 <div class="min-h-screen bg-gray-100">
-  <div class="flex p-12">
+  <div class="grid grid-cols-12 gap-6 p-12">
     {% for product in products %}
-      {% include 'includes/product_card.html' %}
+      <div class="flex justify-center col-span-12 sm:col-span-6 md:col-span-4 ">
+        {% include 'includes/product_card.html' %}
+      </div>
     {% endfor %}
   </div>
 </div>
