@@ -1,26 +1,28 @@
 {% load static %}
 
 <div style="width: 20rem;" class="border-solid border-b-2 hover:border-red-500 border-white bg-white">
-  <div class="w-full h-64 object-cover overflow-hidden">
-    <img src="{{ product.img_url }}" />
-  </div>
-  <div class="text-center w-full p-4">
-    <span class="font-bold text-2xl">{{ product.name}}</span>
-    <p class="uppercase text-sm">{{ product.categories | join:", " }}</p>
-    <div class="flex w-full justify-between items-end mt-4">
-      <div class="space-y-2">
-        <div class="flex">
-          <p>{{ product.min_players }} - {{ product.max_players }}</p>
-          <img src="{% static '/icons/account.png' %}" class="ml-2 h-6 w-6" />
+  <a href="{% url 'product_page' product.id %}">
+    <div class="w-full h-64 object-cover overflow-hidden">
+      <img src="{{ product.img_url }}" />
+    </div>
+    <div class="text-center w-full p-4">
+      <span class="font-bold text-2xl">{{ product.name}}</span>
+      <p class="uppercase text-sm">{{ product.categories | join:", " }}</p>
+      <div class="flex w-full justify-between items-end mt-4">
+        <div class="space-y-2">
+          <div class="flex">
+            <p>{{ product.min_players }} - {{ product.max_players }}</p>
+            <img src="{% static '/icons/account.png' %}" class="ml-2 h-6 w-6" />
+          </div>
+          <div class="flex">
+            <p>{{ product.rating }}</p>
+            <img src="{% static '/icons/heart_blue.png' %}" class="ml-2 h-6 w-6" />
+          </div>
         </div>
-        <div class="flex">
-          <p>{{ product.rating }}</p>
-          <img src="{% static '/icons/heart_blue.png' %}" class="ml-2 h-6 w-6" />
+        <div>
+          <span class="text-2xl">${{ product.price }}</span>
         </div>
-      </div>
-      <div>
-        <span class="text-2xl">${{ product.price }}</span>
       </div>
     </div>
-  </div>
+  </a>
 </div>

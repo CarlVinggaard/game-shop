@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="flex justify-center min-h-screen bg-gray-100 p-12">
+  <div class="bg-white" style="max-width: 800px;">
+    <div class="bg-gray-900 w-full">
+      <a href="/"><img src="{% static 'icons/back_white.png' %}" /></a>
+    </div>
+    <div class="p-4">
+      <div class="flex mb-8">
+        <div class="mr-16">
+          <img class="w-full mb-6" src="{% static 'images/logo.svg' %}" />
+          <table>
+            <tbody>
+              <tr>
+                <td class="font-bold text-gray-600 pr-4">Categories</td>
+                <td class="font-bold uppercase">{{ product.categories | join:", " }}</td>
+              </tr>
+            </tbody>
+              <tr>
+                <td class="font-bold text-gray-600 pr-4">Players</td>
+                <td class="font-bold uppercase">{{ product.min_players }} - {{ product.max_players }}</td>
+              </tr>
+              <tr>
+                <td class="font-bold text-gray-600 pr-4">Age</td>
+                <td class="font-bold uppercase">{{ product.min_age }}+</td>
+              </tr>
+              <tr>
+                <td class="font-bold text-gray-600 pr-4">Playing time</td>
+                <td class="font-bold uppercase">{{ product.min_playing_time }} - {{ product.max_playing_time }} min</td>
+              </tr>
+              <tr>
+                <td class="font-bold text-gray-600 pr-4">Complexity</td>
+                <td class="font-bold uppercase">{{ product.complexity_rating }}/5</td>
+              </tr>
+          </table>
+        </div>
+        <div>
+          <div class="flex mt-4 mb-8">
+            <div class="flex justify-center items-center relative w-16 h-16 mr-8">
+              <div class="absolute inset-1/2 border-solid border-4 border-red-600 h-16 w-16 transform rotate-45"></div>
+              <div class="text-2xl">{{ product.rating }}</div>
+            </div>
+            <div>
+              <span class="text-4xl font-bold">{{ product.name }}</span>
+            </div>
+          </div>
+          <div class="mb-8">
+            <span class="text-4xl">${{ product.price }}</span>
+          </div>
+          <div class="flex mb-8 space-x-4 items-end">
+            <button class="bg-blue-700 text-white py-2 px-4">Add to cart</button>
+            <div>
+              <div>
+              <p class="text-sm">Quantity</p>
+              </div>
+              <input class="border-solid border border-black h-10 mt-2" type="number" />
+            </div>
+          </div>
+          <div>
+            <p>{{ product.description }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="text-sm mb-2">Rate this game</div>
+        <div class="flex">
+          {% for i in '01234356789'|make_list %}
+            <img class="h-6 w-6" src="{% static 'icons/star_red.png' %}" />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
