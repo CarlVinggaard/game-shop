@@ -17,7 +17,9 @@ class Product(models.Model):
     categories = ArrayField(models.CharField(max_length=64))
     featured = models.BooleanField(default=False)
     deal = models.IntegerField(
-        choices=[(val, val) for val in range(0, 100, 5)],
+        choices=[
+            (val, val) for val in range(0, 100, 5)
+        ],  # A deal is a percentage price reductions (between 0 and 100 % and a multiple of 5)
         null=True,
     )
 
