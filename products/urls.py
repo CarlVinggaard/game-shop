@@ -5,4 +5,5 @@ urlpatterns = [
     path("", views.featured_products, name="featured"),
     path("deals", views.deals, name="deals"),
     path("news", views.news, name="news"),
+    path("all-games", views.all_games, name="all-games"),
 ]

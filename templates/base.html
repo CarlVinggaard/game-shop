@@ -24,11 +24,27 @@
         </div>
         <div class="flex relative justify-center">
           <ul class="flex uppercase font-bold text-lg items-center py-4">
-            <li class="mr-8"><a href="https://dr.dk">Featured</a></li>
-            <li class="mr-8"><a>Deals</a></li>
-            <li class="mr-8"><a>News</a></li>
-            <li class="mr-8"><a>All games</a></li>
-            <div class="flex bg-gray-300 items-center">
+            <li
+              class="mr-8 {% if request.path == '/' %} text-red-600 {% endif %}"
+            >
+              <a href="{% url 'featured' %}">Featured</a>
+            </li>
+            <li
+              class="mr-8 {% if request.path == '/deals' %} text-red-600 {% endif %}"
+            >
+              <a href="{% url 'deals' %}">Deals</a>
+            </li>
+            <li
+              class="mr-8 {% if request.path == '/news' %} text-red-600 {% endif %}"
+            >
+              <a href="{% url 'news' %}">News</a>
+            </li>
+            <li
+              class="mr-8 {% if request.path == '/all-games' %} text-red-600 {% endif %}"
+            >
+              <a href="{% url 'all-games' %}">All games</a>
+            </li>
+            <div class="flex bg-gray-300 items-center pr-1">
               <input
                 type="text"
                 placeholder="Search products"

@@ -5,7 +5,7 @@
   "python.linting.lintOnSave": true,
   "python.formatting.provider": "black",
   "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.8/bin/python3",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
   "editor.formatOnSaveMode": "file",
   "[html]": {
