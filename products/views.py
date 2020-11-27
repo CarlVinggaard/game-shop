@@ -1,5 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from .models import Product
+from django.db.models import Q
 
 
 def featured_products(request):
@@ -32,6 +33,21 @@ def all_games(request):
     context = {"products": products}
 
     return render(request, "products/all_games.html", context)
+
+
+def search(request):
+    if request.GET:
+        if 'query' in request.GET:
+            query = request.GET['query']
+            if not query:
+                return redirect(reverse('featured'))
+
+            queries = Q(name__icontains=query) | Q(description__contains=query)
+            products = Product.objects.filter(queries)
+
+            context = {"products": products, "query": query}
+
+            return render(request, "products/search.html", context)
 
 
 def product_page(request, product_id):

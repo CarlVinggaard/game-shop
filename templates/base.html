@@ -50,14 +50,17 @@
             >
               <a href="{% url 'all-games' %}">All games</a>
             </li>
-            <div class="flex bg-gray-300 items-center pr-1">
-              <input
-                type="text"
-                placeholder="Search products"
-                class="p-2 bg-transparent text-gray-700 h-full w-full"
-              />
-              <img class="w-8 h-8" src="{% static 'icons/search.png' %}" />
-            </div>
+            <form method="GET" action="{% url 'search' %}">
+              <div class="flex bg-gray-300 items-center pr-1">
+                  <input
+                    name="query"
+                    type="text"
+                    placeholder="Search products"
+                    class="p-2 bg-transparent text-gray-700 h-full w-full"
+                  />
+                  <img class="w-8 h-8" src="{% static 'icons/search.png' %}" />
+              </div>
+            </form>
           </ul>
           <div class="absolute right-0 top-0 mr-8 flex">
             <div class="text-center font-normal text-sm mr-4">
