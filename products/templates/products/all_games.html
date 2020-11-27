@@ -2,6 +2,31 @@
 {% load static %}
 {% block content %}
 <div class="min-h-screen bg-gray-100">
+  <div class="flex justify-center py-12 px-20">
+    <div class="flex w-full bg-white border-b-2 border-solid border-red-600 py-4 px-12">
+      <label class="mr-8">
+        <div class="text-sm mb-2">Sort by</div>
+        <select id="sort-select" class="py-2 px-4 border border-solid border-black w-64">
+          <option values="price_asc">Price (low to high)</option>
+          <option values="price_desc">Price (high to low)</option>
+          <option values="comlexity_rating">Complexity</option>
+          <option values="rating">Popularity</option>
+          <option values="avg_playing_time">Playing time</option>
+        </select>
+      </label>
+      <label>
+        <div class="text-sm mb-2">Filter</div>
+        <select id="filter-select" class="py-2 px-4 border border-solid border-black w-64">
+          <option values="card_game">Card games</option>
+          <option values="strategy">Strategy</option>
+          <option values="family">Family</option>
+          <option values="party">Party</option>
+          <option values="economic">Economic</option>
+          <option values="science_fiction">Science Fiction</option>
+        </select>
+      </label>
+    </div>
+  </div>
   <div class="grid grid-cols-12 gap-6 p-12">
     {% for product in products %}
       <div class="flex justify-center col-span-12 sm:col-span-6 md:col-span-4 ">
@@ -12,3 +37,5 @@
 </div>
 {% endblock %}
 
+{% block postloadjs %}
+{% endblock %}
