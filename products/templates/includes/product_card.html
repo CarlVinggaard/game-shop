@@ -3,11 +3,11 @@
 <div style="width: 20rem;" class="border-solid border-b-2 hover:border-red-500 border-white bg-white">
   <a href="{% url 'product_page' product.id %}">
     <div class="w-full h-64 object-cover overflow-hidden">
-      <img src="{{ product.img_url }}" />
+      <img class="w-full" src="{{ product.img_url }}" />
     </div>
     <div class="text-center w-full p-4">
-      <span class="font-bold text-2xl">{{ product.name}}</span>
-      <p class="uppercase text-sm">{{ product.categories | join:", " }}</p>
+      <h1 class="font-bold text-2xl">{{ product.name}}</h1>
+      <span class="uppercase">{{ product.categories | join:", " }}</span>
       <div class="flex w-full justify-between items-end mt-4">
         <div class="space-y-2">
           <div class="flex">
@@ -20,7 +20,7 @@
           </div>
         </div>
         <div>
-          <span class="text-2xl">${{ product.price }}</span>
+          <span class="text-3xl">${{ product.price }}</span>
         </div>
       </div>
     </div>

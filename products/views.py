@@ -11,11 +11,19 @@ def featured_products(request):
 
 
 def deals(request):
-    return render(request, "products/deals.html")
+    products = Product.objects.filter(deal__gte=0).all()
+
+    context = {"products": products}
+
+    return render(request, "products/deals.html", context)
 
 
 def news(request):
-    return render(request, "products/news.html")
+    products = Product.objects.filter(release_year__gte=2015).all()
+
+    context = {"products": products}
+
+    return render(request, "products/news.html", context)
 
 
 def all_games(request):

@@ -20,7 +20,8 @@
         "science fiction"
       ],
       "featured": false,
-      "deal": 35
+      "deal": 35,
+      "release_year": 2016
     }
   },
   {
@@ -42,7 +43,78 @@
         "strategy",
         "economic"
       ],
-      "featured": true
+      "featured": true,
+      "release_year": 2013
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Agricola",
+      "price": 53.99,
+      "min_players": 1,
+      "max_players": 5,
+      "min_age": 12,
+      "img_url": "https://cf.geekdo-images.com/dDDo2Hexl80ucK1IlqTk-g__itemrep/img/DzC9cA0TNmWUO7WLdl4-uFHfO_k=/fit-in/246x300/filters:strip_icc()/pic831744.jpg",
+      "min_playing_time": 30,
+      "max_playing_time": 150,
+      "complexity_rating": 3.64,
+      "rating": 8.0,
+      "description": "In Agricola, you're a farmer in a wooden shack with your spouse and little else. On a turn, you get to take only two actions, one for you and one for the spouse, from all the possibilities you'll find on a farm: collecting clay, wood, or stone; building fences; and so on. You might think about having kids in order to get more work accomplished, but first you need to expand your house. And what are you going to feed all the little rugrats?",
+      "categories": [
+        "strategy",
+        "economic"
+      ],
+      "featured": false,
+      "release_year": 2007
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Puerto Rico",
+      "price": 27.99,
+      "min_players": 3,
+      "max_players": 5,
+      "min_age": 12,
+      "img_url": "https://cf.geekdo-images.com/QFiIRd2kimaMqTyWsX0aUg__itemrep/img/YDEozo5DfKYdDp8xi2mAfoV2qWk=/fit-in/246x300/filters:strip_icc()/pic158548.jpg",
+      "min_playing_time": 90,
+      "max_playing_time": 150,
+      "complexity_rating": 3.28,
+      "rating": 8.0,
+      "description": "In Puerto Rico, players assume the roles of colonial governors on the island of Puerto Rico. The aim of the game is to amass victory points by shipping goods to Europe or by constructing buildings. Each player uses a separate small board with spaces for city buildings, plantations, and resources. Shared between the players are three ships, a trading house, and a supply of resources and doubloons. The resource cycle of the game is that players grow crops which they exchange for points or doubloons. Doubloons can then be used to buy buildings, which allow players to produce more crops or give them other abilities. Buildings and plantations do not work unless they are manned by colonists.",
+      "categories": [
+        "strategy",
+        "economic"
+      ],
+      "featured": false,
+      "release_year": 2002
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Codenames",
+      "price": 14.99,
+      "min_players": 2,
+      "max_players": 8,
+      "min_age": 14,
+      "img_url": "https://cf.geekdo-images.com/F_KDEu0GjdClml8N7c8Imw__itemrep/img/e8zw8YQvQB8q8zfWkHQ48Ls920g=/fit-in/246x300/filters:strip_icc()/pic2582929.jpg",
+      "min_playing_time": 15,
+      "max_playing_time": 15,
+      "complexity_rating": 1.29,
+      "rating": 7.6,
+      "description": "Two rival spymasters know the secret identities of 25 agents. Their teammates know the agents only by their CODENAMES. In Codenames, two teams compete to see who can make contact with all of their agents first. Spymasters give one-word clues that can point to multiple words on the board. Their teammates try to guess words of the right color while avoiding those that belong to the opposing team. And everyone wants to avoid the assassin.",
+      "categories": [
+        "strategy",
+        "economic"
+      ],
+      "featured": true,
+      "deal": 15,
+      "release_year": 2015
     }
   }
 ]

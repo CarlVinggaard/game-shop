@@ -8,6 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% endblock %}
 
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.svg' %}"/>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+
+    <link href="{% static 'customcss/styles.css' %}" rel="stylesheet" />
+
     <link
       rel="stylesheet"
       href="{% static 'css/styles.css' %}"
@@ -20,7 +26,7 @@
     <header>
       <div id="navbar" class="w-full border-b-2 border-solid border-blue-700">
         <div class="flex justify-center py-16">
-          <img src="{% static 'images/logo.svg' %}" />
+          <a href="{% url 'featured' %}"><img src="{% static 'images/logo.svg' %}" /></a>
         </div>
         <div class="flex relative justify-center">
           <ul class="flex uppercase font-bold text-lg items-center py-4">
