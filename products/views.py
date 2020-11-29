@@ -30,6 +30,10 @@ def news(request):
 def all_games(request):
     products = Product.objects.all()
 
+    if 'sort' in request.GET:
+        key = request.GET['sort']
+        products = products.order_by(key)
+
     context = {"products": products}
 
     return render(request, "products/all_games.html", context)

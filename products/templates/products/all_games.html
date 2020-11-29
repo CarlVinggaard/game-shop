@@ -6,23 +6,23 @@
     <div class="flex w-full bg-white border-b-2 border-solid border-red-600 py-4 px-12">
       <label class="mr-8">
         <div class="text-sm mb-2">Sort by</div>
-        <select id="sort-select" class="py-2 px-4 border border-solid border-black w-64">
-          <option values="price_asc">Price (low to high)</option>
-          <option values="price_desc">Price (high to low)</option>
-          <option values="comlexity_rating">Complexity</option>
-          <option values="rating">Popularity</option>
-          <option values="avg_playing_time">Playing time</option>
+        <select id="sort-select" class="py-2 px-4 border border-solid border-black w-64" onChange="sortProducts()">
+          <option value="price">Price (low to high)</option>
+          <option value="price">Price (high to low)</option>
+          <option value="complexity_rating">Complexity</option>
+          <option value="rating">Popularity</option>
+          <option value="avg_playing_time">Playing time</option>
         </select>
       </label>
       <label>
         <div class="text-sm mb-2">Filter</div>
-        <select id="filter-select" class="py-2 px-4 border border-solid border-black w-64">
-          <option values="card_game">Card games</option>
-          <option values="strategy">Strategy</option>
-          <option values="family">Family</option>
-          <option values="party">Party</option>
-          <option values="economic">Economic</option>
-          <option values="science_fiction">Science Fiction</option>
+        <select id="filter-select" class="py-2 px-4 border border-solid border-black w-64" onChange="filterProducts()">
+          <option value="card_game">Card games</option>
+          <option value="strategy">Strategy</option>
+          <option value="family">Family</option>
+          <option value="party">Party</option>
+          <option value="economic">Economic</option>
+          <option value="science_fiction">Science Fiction</option>
         </select>
       </label>
     </div>
@@ -38,4 +38,22 @@
 {% endblock %}
 
 {% block postloadjs %}
+  {{ block.super}}
+  <script>
+    function sortProducts() {
+      console.log('sortProducts() fired')
+      let url = new URL(window.location);
+      const val = document.getElementById('sort-select').value;
+      url.searchParams.set('sort', val);
+      window.location.replace(url);
+    }
+
+    function filterProducts() {
+      console.log('filterProducts() fired')
+      let url = new URL(window.location)
+      const val = document.getElementById('filter-select').value;
+      url.searchParams.append('filter', val)
+      window.location.replace(url)
+    }
+  </script>
 {% endblock %}
